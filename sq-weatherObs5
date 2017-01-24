@@ -1,0 +1,12 @@
+SELECT city, lenc2 FROM (
+    SELECT  DISTINCT LENGTH(city) as lenc2, city
+    FROM station
+    ORDER BY lenc2,city
+    LIMIT 1) AS tab1
+;
+SELECT city,lenc2 FROM (
+    SELECT  DISTINCT LENGTH(city) as lenc2, city
+    FROM station
+    ORDER BY lenc2 DESC,city ASC
+    LIMIT 1)  AS tab2
+;
